@@ -3,6 +3,8 @@ Implementation of Content-Aware Resizing of Images in C++
 
 This program uses the algorithm specified in [this paper](http://graphics.cs.cmu.edu/courses/15-463/2013_fall/hw/proj3-seamcarving/imret.pdf) to perform 'content-aware' resizing of images by always removing areas of low contrast first.
 
+The algorithm essentially states that 1) a gradient map of the image should be computed in the x and y dimensions then 2) the least-gradient path of pixels should be deleted on whichever dimension that needs to be resized. This algorithm is then repeated as many times as needed to achieve the resulting dimensions.
+
 # Demo
 
 This image was resized from 1600x775 to 800x387 (half-size)
